@@ -13,5 +13,5 @@ app.use(bodyParser.json());
 app.use("/", categoriesController);
 
 app.listen(8081, () => {
-    console.log('O servidor esta rodando')
+    console.log('O servidor esta rodando na porta 8081')
 });
