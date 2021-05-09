@@ -4,7 +4,14 @@
     <div class="container">
         <h1>Guia Press</h1>
         <hr>
-        
+        <% categories.forEach(category => { %>
+            <tr>
+                <th><%= category.id %></th>
+                <th><%= category.title %></th>
+                <th><%= category.slug %></th>
+                <th></th>
+            </tr>                
+        <% }) %>          
     </div>
 </body>
 <%-include('partials/bottom.ejs') %>

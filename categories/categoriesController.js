@@ -15,12 +15,20 @@ router.post('/admin/categories/save', (req,res) => {
         category.create({
             title: title,
             slug: slugify(title),
+        }).then(() => {
+            
         })  
     }else{
         res.redirect("/admin/categories/new")
     }
         
     res.send("rota de categorias")
+});
+
+router.get('/admin/categories/', (req,res) => {
+    category.findAll().then(categories => {
+        res.render("admin/categories/index", {categories : categories})
+    });
 });
 
 module.exports = router;
